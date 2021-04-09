@@ -1,4 +1,5 @@
 import { Column, AutoIncrement, Model, NotNull, PrimaryKey, Default, DataType, Table, BelongsTo } from 'sequelize-typescript'
+import { Project } from './project'
 import { Shoot } from './shoot'
 
 
@@ -36,15 +37,24 @@ export class Banner extends Model<Banner>{
     })
     public createTime: number
 
-    @NotNull
     @Column({
         type: DataType.INTEGER(10),
         comment: '关联的花絮id'
     })
     public shoot_id: number
 
+    @Column({
+        type: DataType.INTEGER(10)
+    })
+    public project_id: number
+
+
+    @BelongsTo(() => Project, { foreignKey: 'project_id', targetKey: 'id' })
+    project: Project[]
+
     @BelongsTo(() => Shoot, { foreignKey: 'shoot_id', targetKey: 'id' })
     shoot: Shoot[]
+
 
 }
 export default () => Banner
