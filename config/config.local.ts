@@ -33,7 +33,7 @@ export default () => {
       },
       define: {
         // 强制表名称等于模型名
-        freezeTableName: true,
+        // freezeTableName: true,
         timestamps: false,
       }
 
