@@ -52,7 +52,6 @@ export class Shoot extends Model<Shoot> {
         type: DataType.TEXT,
         comment: '描述'
     })
-
     public desc: string
 
     @HasMany(() => Banner, { foreignKey: 'shoot_id', sourceKey: 'id' })

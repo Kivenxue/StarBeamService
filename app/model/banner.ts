@@ -1,10 +1,6 @@
 import { Column, AutoIncrement, Model, NotNull, PrimaryKey, Default, DataType, Table, BelongsTo } from 'sequelize-typescript'
 import { Shoot } from './shoot'
 
-// import { Shoot } from './shoot'
-// 多张图片对应一个花絮
-// 一个花絮 对 多个 图片
-// class student
 
 @Table({
     modelName: 'banner',
