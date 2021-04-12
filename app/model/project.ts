@@ -23,25 +23,12 @@ export class Project extends Model<Project>{
     })
     public id: number;
 
-    @NotNull
-    @Column({
-        type: DataType.STRING(50)
-    })
-    public name: string
-
-    @NotNull
     @Column({
         type: DataType.TEXT
     })
     public address: string
 
-    @NotNull
-    @Column({
-        type: DataType.TEXT
-    })
-    public desc: string
 
-    @NotNull
     @Column({
         type: DataType.STRING(15)
     })
@@ -52,6 +39,27 @@ export class Project extends Model<Project>{
         type: DataType.INTEGER(10)
     })
     public cid: number
+
+    
+    // 新增字段
+    @Column({
+        type: DataType.STRING(100)
+    })
+    public itemImg: String
+
+
+    
+    @Column({
+        type: DataType.STRING(50)
+    })
+    public itemTitle: String
+
+
+    @Column({
+        type: DataType.STRING(50)
+    })
+    public itemSubTitle: String
+
 
     // 跟轮播图搭建关系
     @HasMany(() => Banner, { foreignKey: 'project_id', sourceKey: 'id' })

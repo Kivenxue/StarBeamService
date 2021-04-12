@@ -54,6 +54,15 @@ export class Shoot extends Model<Shoot> {
     })
     public desc: string
 
+
+    // 缩略图
+    @NotNull
+    @Column({
+        type: DataType.TEXT,
+        comment: '描述'
+    })
+    public small_img: string
+
     @HasMany(() => Banner, { foreignKey: 'shoot_id', sourceKey: 'id' })
     banner: Banner[]
 
