@@ -6,4 +6,5 @@ export default (app: Application) => {
   require('./router/opus')(app)
   require('./router/project')(app)
   require('./router/category')(app)
+  require('./router/adminRouter')(app)
 };

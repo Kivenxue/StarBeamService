@@ -31,6 +31,25 @@ export class projectCategory extends Model<projectCategory>{
     })
     public small_img: string
 
+    
+
+    @Column({
+        type: DataType.STRING(50)
+    })
+    public title: string
+
+    @Column({
+        type: DataType.STRING(50)
+    })
+    public subTitle: string
+
+    @Column({
+        type: DataType.TEXT
+    })
+    public subDesc: string
+
+
+
     @HasMany(() => Project, { foreignKey: 'cid', sourceKey: 'id' })
     project: Project
 
