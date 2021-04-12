@@ -1,6 +1,6 @@
 import { Column, AutoIncrement, Model, NotNull, PrimaryKey, DataType, Table, HasMany, BelongsTo } from 'sequelize-typescript'
 import { Banner } from './banner';
-import { Category } from './category';
+import { projectCategory } from './category';
 
 /**
  * 一个项目对应多个分类？
@@ -8,7 +8,7 @@ import { Category } from './category';
  * 多个项目对应多个分类？
  * 
  * student info
- * project project_category
+ * project project_category˝
  * 文章 分类
  * 
  */
@@ -58,8 +58,8 @@ export class Project extends Model<Project>{
     banner: Banner
 
     // 跟分类搭建关系
-    @BelongsTo(() => Category, { foreignKey: 'cid', targetKey: 'id' })
-    category: Category
+    @BelongsTo(() => projectCategory, { foreignKey: 'cid', targetKey: 'id' })
+    category: projectCategory
 
 
 

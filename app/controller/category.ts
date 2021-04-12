@@ -6,6 +6,13 @@ class CategoryController extends BaseController {
         const res = await this.service.category.getAllData()
         this.success(res)
     }
+
+    // 根据分类获取项目
+    async getProjectById() {
+        const id = this.ctx.params.id
+        const res = await this.service.category.getProjectById(id);
+        this.success(res)
+    }
 }
 
 export default CategoryController
