@@ -21,7 +21,7 @@ export default () => {
       host: '127.0.0.1',
       port: 3306,
       username: 'root',
-      password: 'lemon123',
+      password: 'root',
       database: 'starbeam',
       timezone: '+08:00',
       // 数据库连接池
