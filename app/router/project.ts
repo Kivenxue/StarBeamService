@@ -8,4 +8,6 @@ module.exports = (app: Application) => {
     // 根据id获取项目的分类与轮播图
     router.get('/api/project/:id', controller.project.getDataById)
 
+    
+
 }

@@ -12,6 +12,7 @@ class ProjectController extends BaseController {
         const res = await this.service.project.getOneData(id)
         this.success(res)
     }
+
 }
 
 export default ProjectController

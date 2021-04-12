@@ -1,11 +1,11 @@
-import { Table, Model, PrimaryKey, AutoIncrement, Column, NotNull, DataType, HasOne } from 'sequelize-typescript'
+import { Table, Model, PrimaryKey, AutoIncrement, Column, NotNull, DataType, HasMany } from 'sequelize-typescript'
 import { Project } from './project'
 
 @Table({
-    modelName: 'category'
+    modelName: 'projectCategory'
 })
 
-export class Category extends Model<Category>{
+export class projectCategory extends Model<projectCategory>{
     @PrimaryKey
     @AutoIncrement
     @Column({
@@ -31,10 +31,10 @@ export class Category extends Model<Category>{
     })
     public small_img: string
 
-    @HasOne(() => Project, { foreignKey: 'cid' })
+    @HasMany(() => Project, { foreignKey: 'cid', sourceKey: 'id' })
     project: Project
 
 
 
 }
-export default () => Category
+export default () => projectCategory
