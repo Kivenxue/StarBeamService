@@ -9,14 +9,12 @@ class CategoryService extends Service {
     }
 
     // 根据id获取分类项目
-    async getProjectById(id) {
+    async getProjectById(id: number) {
         if (id) {
             const res = await this.app.model.Category.findAll({
                 include: [{ model: Project, where: { cid: id } }]
             })
             return res
-        } else {
-            return null
         }
 
     }

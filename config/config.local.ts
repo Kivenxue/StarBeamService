@@ -37,7 +37,9 @@ export default () => {
         timestamps: false,
       }
 
-    }
+    },
+    /**keys */
+    keys: "1617851402870_1698"
   };
   return config;
 };
