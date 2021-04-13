@@ -1,4 +1,5 @@
-import { Column, AutoIncrement, Model, NotNull, PrimaryKey, Default, DataType, Table } from 'sequelize-typescript'
+import { Column, AutoIncrement, Model, NotNull, PrimaryKey, Default, DataType, Table, BelongsTo } from 'sequelize-typescript'
+import { opusCategory } from './opusCategory'
 
 @Table({
     modelName: 'opus'
@@ -54,6 +55,15 @@ export class Opus extends Model<Opus>{
         comment: '创建时间'
     })
     public createTime: number
+
+    @Column({
+        type: DataType.INTEGER
+    })
+    public cid: number
+
+    @BelongsTo(() => opusCategory, { foreignKey: 'cid', targetKey: 'id' })
+    category: opusCategory[]
+
 }
 
 export default () => Opus

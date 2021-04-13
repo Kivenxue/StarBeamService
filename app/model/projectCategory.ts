@@ -31,8 +31,6 @@ export class projectCategory extends Model<projectCategory>{
     })
     public small_img: string
 
-    
-
     @Column({
         type: DataType.STRING(50)
     })

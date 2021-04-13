@@ -1,6 +1,6 @@
 import { Column, AutoIncrement, Model, NotNull, PrimaryKey, DataType, Table, HasMany, BelongsTo } from 'sequelize-typescript'
 import { Banner } from './banner';
-import { projectCategory } from './category';
+import { projectCategory } from './projectCategory';
 
 /**
  * 一个项目对应多个分类？
@@ -40,7 +40,7 @@ export class Project extends Model<Project>{
     })
     public cid: number
 
-    
+
     // 新增字段
     @Column({
         type: DataType.STRING(100)
@@ -48,7 +48,7 @@ export class Project extends Model<Project>{
     public itemImg: String
 
 
-    
+
     @Column({
         type: DataType.STRING(50)
     })

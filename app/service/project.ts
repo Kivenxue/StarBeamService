@@ -1,6 +1,6 @@
 import { Service } from 'egg'
 import { Banner } from '../model/banner'
-import { projectCategory } from '../model/category'
+import { projectCategory } from '../model/projectCategory'
 
 class ProjectService extends Service {
     // 查找全部项目
