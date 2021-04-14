@@ -9,7 +9,11 @@ export default (appInfo: EggAppInfo) => {
 
   // add your egg config in here
   config.middleware = [];
-
+  config.multipart = {
+    fileSize: '50mb',
+    mode: 'stream',
+    // fileExtensions: ['.mp4']
+  }
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,

@@ -4,7 +4,7 @@ export default () => {
   const config: PowerPartial<EggAppConfig> = {
     /** 配置跨域 */
     cors: {
-      origin: 'http://127.0.0.1:3000',
+      origin: '*',
       allowMethods: 'GET,POST,DELETE,PUT,OPTIONS',
       credentials: true
     },

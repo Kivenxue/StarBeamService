@@ -7,4 +7,5 @@ export default (app: Application) => {
   require('./router/project')(app)
   require('./router/category')(app)
   require('./router/adminRouter')(app)
+  require('./router/file')(app)
 };

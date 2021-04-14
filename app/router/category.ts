@@ -11,6 +11,6 @@ module.exports = (app: Application) => {
 
     // 根据分类获取作品
     router.get('/api/category/opus', controller.category.getDataByOpus)
-    
+
 
 }
