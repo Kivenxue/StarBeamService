@@ -6,5 +6,4 @@ module.exports = (app: Application) => {
     router.get('/api/opus/', controller.opus.getData)
     router.get('/api/opus/:id', controller.opus.getData)
 
-    router.get('/api/category/opus', controller.opus.getDataByCategory)
 }

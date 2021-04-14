@@ -8,9 +8,5 @@ class OpusController extends BaseController {
         const res = await this.service.opus.findOpusData(id)
         this.success(res)
     }
-    async getDataByCategory() {
-        const res = await this.service.category.getOpus()
-        this.success(res)
-    }
 }
 export default OpusController
